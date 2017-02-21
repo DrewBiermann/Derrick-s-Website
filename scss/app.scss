@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald|Yellowtail');
+
+/*Variables*/
+
+$fontTitles: Yellowtail;
+$fontRegular: Oswald;
+$colorLightBlue: #013440;
+$colorRed: #AB1A25;
+$colorOffWhite: #EFE7BE;
+$colorOrange: #D97925;
+$colorGray: #181818;
+
+/*Functions*/
+
+
+/*Global Styles*/
+
+body{
+    overflow-x: hidden;
+    margin: 0;
+}
+
+nav a{
+    font: 1.2em $fontTitles;
+}
+
+a{
+    color: $colorLightBlue;
+}
+
+p, tr, td, thead, tbody, table{
+    font: 100% $fontRegular;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+div h2 table{
+    border: 0px;
+    background-color: $colorRed;
+}
+
+th{
+    text-align: center;
+}
+
+.bgRedColorWrapper{
+    background: rgba($colorRed, 0.90);
+}
+
+.bgOffWhiteColorWrapper{
+    background: rgba($colorOffWhite, 0.90);
+}
+
+h2{
+    
+    text-align: center;
+    font: 4em $fontTitles;
+    color: $colorLightBlue;
+    padding: 1vh 0 1vh 0;
+    margin: 0;
+}
+
+/*Header*/
+
+.title-bar svg{
+    
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top:0;
+    padding: 0;
+    margin: 0;
+    z-index: 0;
+    opacity: 0.9;
+} 
+
+.title-bar{
+    background: none;
+    padding: 0;
+    margin: 0;
+    z-index: 100;
+    width: 100%;
+    position: relative;
+    font-size: 1.5em;
+    
+}
+
+.title-bar-left, .title-bar-right{
+    position: absolute;
+    z-index: 100;
+}
+
+.title-bar-left{
+    left: 10%;
+}
+
+.title-bar-right{
+    right: 10%;
+}
+
+/*HERO*/
+.hero{
+    
+}
+
+.fullscreen-bg {
+    position: absolute;
+    top: 0;
+    z-index: -100;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.fullscreen-bg__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: 100vh;
+    
+}
+
+
+/*ABOUT*/
+.about{
+    padding-top: 105vh;
+    margin-top: 0;
+}
+
+
+/*SHOWS*/
+
+.shows{
+    width: 100%;
+    padding: 5vh 0 5vh 0;
+    color: white;
+}
+
+/*FOOTER*/
+
+footer{
+    
+    @extend .shows;
+    background: $colorGray;
+}
