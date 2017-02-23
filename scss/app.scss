@@ -10,14 +10,25 @@ $colorOffWhite: #EFE7BE;
 $colorOrange: #D97925;
 $colorGray: #181818;
 
-/*Functions*/
+/*Mixins*/
 
+@mixin flex{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 /*Global Styles*/
 
+html{
+    height: 100%;
+}
+
 body{
     overflow-x: hidden;
-    margin: 0;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 nav a{
@@ -28,37 +39,34 @@ a{
     color: $colorLightBlue;
 }
 
-p, tr, td, thead, tbody, table{
+p{
     font: 100% $fontRegular;
     text-align: center;
     padding: 0;
     margin: 0;
 }
 
-div h2 table{
-    border: 0px;
-    background-color: $colorRed;
-}
-
-th{
-    text-align: center;
-}
-
 .bgRedColorWrapper{
     background: rgba($colorRed, 0.90);
+    
 }
 
 .bgOffWhiteColorWrapper{
     background: rgba($colorOffWhite, 0.90);
 }
 
-h2{
+h2,h3{
     
     text-align: center;
     font: 4em $fontTitles;
     color: $colorLightBlue;
     padding: 1vh 0 1vh 0;
     margin: 0;
+}
+
+h3{
+    color: $colorOrange;
+    font-size: 2em;
 }
 
 /*Header*/
@@ -127,7 +135,7 @@ h2{
 
 /*ABOUT*/
 .about{
-    padding-top: 105vh;
+    padding: 105vh 0 5vh 0;
     margin-top: 0;
 }
 
@@ -145,5 +153,6 @@ h2{
 footer{
     
     @extend .shows;
+    flex: 1;
     background: $colorGray;
 }
